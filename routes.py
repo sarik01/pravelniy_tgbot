@@ -90,7 +90,7 @@ async def generate_kb_cats(lang: str) -> ReplyKeyboardMarkup:
 
 @dp.message_handler(Text(equals="O'zbekcha"))
 async def uz(message: types.Message):
-    kb = await generate_kb_cats('uz_kir')
+    kb = await generate_kb_cats('uz')
     await bot.send_message(message.from_user.id, "Yo'nalish tugmasini bosing", reply_markup=kb)
 
 
